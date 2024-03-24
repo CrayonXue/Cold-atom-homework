@@ -1,0 +1,70 @@
+\documentclass[a4paper]{article}
+\usepackage[scale=0.85]{geometry}
+\usepackage{titling}
+\usepackage{minted}
+\usepackage{amsmath,amsfonts}
+\usepackage{xcolor}
+\usepackage{braket}
+\usepackage{bm}
+\usepackage{tensor}
+\usepackage{cleveref}
+% \usepackage{MnSymbol}
+\usepackage{mhchem}
+\usepackage{graphicx}
+
+\usemintedstyle{vs}
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+\setminted{bgcolor=bg,linenos,breaklines}
+
+\allowdisplaybreaks[4]
+
+\makeatletter
+\renewcommand{\maketitle}{%
+    %   \sffamily
+    \begin{flushleft}
+    \sffamily
+      {\Large\bfseries\@title\par}%
+      \medskip
+      {\large\course\par}%
+      \medskip
+      {\@date\par}%
+    \end{flushleft}
+     \begin{flushright}%
+      {\@author\quad ID: \id\\}
+      {\itshape \inst\\}
+      {Email: \ttfamily\email}
+   \end{flushright}%
+   \rule{\textwidth}{1pt}\vspace*{2pc}%
+}
+\makeatother
+
+\def\tr{\operatorname{tr}}
+
+
+\title{Homework}
+\author{Xue Chen}
+\date{December 2022}
+
+\def\course{Ultracold Atomic Physics}
+\def\inst{Institute for Advanced Study, Tsinghua University}
+\def\id{2022311901}
+\def\email{chenx22@mails.tsinghua.edu.cn}
+
+\begin{document}
+
+\maketitle
+
+\input{1.8.tex}
+\input{2.1.tex}
+\input{2.2.tex}
+\input{2.3.tex}
+\input{3.1.tex} 
+\input{3.2.tex}
+\input{3.4.tex}
+\input{3.9.tex}
+\input{3.10.tex}
+\input{6.1.tex}
+\input{6.2.tex}
+\input{6.3.tex}
+
+\end{document}

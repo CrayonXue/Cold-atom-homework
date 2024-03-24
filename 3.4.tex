@@ -1,0 +1,37 @@
+\section*{Problem 3.4}
+
+\def\k{\bm{k}}
+
+Show that the wave function Eq. 3.57 is the ground state wave function of the Bogoliubov Hamiltonian that satisfies $\left\langle G\left\lvert \hat{a}_{\k =0}\right\rvert G\right\rangle =\sqrt[]{N_0}$ and $\hat{\alpha}_{\k }\vert G\rangle =0$
+\paragraph*{Solution:}
+\begin{equation}
+    \vert G\rangle  = e^{\sqrt[]{N_0}\hat{a}^{\dagger}_{\k =0}}\exp\left(-\sum_{\k \neq 0}\frac{v_{\k} }{u_{\k} }\hat{a}^{\dagger}_{\k} \hat{a}^{\dagger}_{-\k} \right)\vert 0 \rangle
+\end{equation}
+The operator $\hat{a}_{\k =0}$ commutes with all other creation and annihilation operators at modes $\k  \neq 0$. So we can simply consider $\hat{a}_{\k =0}e^{\sqrt[]{N_0}\hat{a}^{\dagger}_{\k =0}}\vert 0 \rangle$, which gives (for simplicity, we dropped the suffix $\k =0$)
+\begin{equation}
+    \hat{a}e^{\sqrt[]{N_0}\hat{a}^{\dagger}}\vert 0 \rangle = \hat{a}\sum_{n=0}\frac{1}{n!}\left(\sqrt[]{N_0}\hat{a}^{\dagger}_{\k =0}\right)^n\vert 0 \rangle = \hat{a}\sum_{n=0}\frac{\sqrt[]{N_0}^n}{\sqrt[]{n!}}\vert n \rangle =\sum_{n=1}\frac{\sqrt[]{N_0}^n}{\sqrt[]{(n-1)!}}\ket{n-1} = \sqrt[]{N_0}e^{\sqrt[]{N_0}\hat{a}^{\dagger}}\ket{0}
+\end{equation}
+with this we can easily obtain $ \braket{G|\hat{a}_{\k =0}|G} = \sqrt[]{N_0} $
+
+With the definition 
+\begin{equation}
+    \hat{a}_{\k } = u_{\k } \hat{\alpha}_{\k } - v_{\k } \hat{\alpha}^{\dagger}_{-\k}
+\end{equation}
+\begin{equation}
+    \hat{a}^{\dagger}_{-\k} = -v_{\k } \hat{\alpha}_{\k } + u_{\k } \hat{\alpha}^{\dagger}_{-\k}
+\end{equation}
+and
+\begin{equation}
+    u^2_{\k } = \frac{1}{2}\left(\frac{\epsilon _{\k }+gn_0}{\mathcal{E} _{\k }}+1\right)
+\end{equation}
+\begin{equation}
+    v^2_{\k } = \frac{1}{2}\left(\frac{\epsilon _{\k }+gn_0}{\mathcal{E} _{\k }}-1\right)
+\end{equation}
+we have $\hat{\alpha}_{\k } = u_{\k }\hat{a}_{\k }+v_{\k }\hat{a}^{\dagger}_{-\k}$.Using 
+\begin{equation}
+    \left[\hat{a}_{\k },\exp\left(-\sum_{\k \neq 0}\frac{v_{\k} }{u_{\k} }\hat{a}^{\dagger}_{\k} \hat{a}^{\dagger}_{-\k} \right) \right] = \left[\hat{a}_{\k },\hat{a}^{\dagger}_{\k} \right]\ = -\frac{v_{\k} }{u_{\k} }\hat{a}^{\dagger}_{-\k}\ket{0}
+\end{equation}
+we have
+\begin{equation}
+    \hat{\alpha}_{\k }\ket{G} =  \left(-u_{\k }\frac{v_{\k} }{u_{\k} }+v_{\k }\right)\hat{a}^{\dagger}_{-\k}\ket{0} = 0
+\end{equation}

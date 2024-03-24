@@ -1,0 +1,30 @@
+\section*{Problem 3.1}
+Discuss the Bose-Einstein condensation temperature for free bosons at one and two dimensions.
+\paragraph*{Solution:}
+The density of bosons on each mode obays the Bose-Einstein distribution
+\begin{equation}
+    n_k = \frac{1}{e^{\left(\varepsilon _k - \mu\right) /k_BT}-1}
+\end{equation}
+For free bosons we have $\varepsilon_k = \frac{\hbar^2k^2}{2m}$. To let BEC occure, the chemical potential $\mu(T_c)=0$. 
+
+In 1D, the conservation of the number of particles becomes
+\begin{equation}
+    N = \frac{L}{2\pi}\sum _k \frac{1}{\exp\left({\frac{1}{k_BT_c}\frac{\hbar^2k^2}{2m}}\right)-1}
+\end{equation}
+With the thermal de-Brogile wavelengh defined as 
+\begin{equation}
+    4\pi\frac{\hbar^2}{2m\lambda ^2} = k_BT
+\end{equation}
+and change the summation into integral, we have
+\begin{equation}
+    N = \frac{L}{2\pi}\int_{0}^{\infty} dk  \frac{1}{e^{(k\lambda_c)^2/4\pi}-1} = \frac{L}{2\pi \lambda_c}\int_{0}^{\infty} dx \frac{1}{e^{x^2/4\pi}-1}
+\end{equation}
+When $x \to 0$, the component in the integral approximates to $\frac{4 \pi}{x^2} $, leading the integral diverges.
+
+For 2D, in the same way, we have
+\begin{equation}
+    N = \frac{S}{(2\pi)^2}\int_{0}^{\infty} 2\pi k dk  \frac{1}{e^{(k\lambda_c)^2/4\pi}-1} = \frac{S}{2\pi \lambda_c^2}\int_{0}^{\infty} dx \frac{x}{e^{x^2/4\pi}-1}
+\end{equation}
+The integral can be written as $\int_{0}^{\infty}dx \frac{1}{2}\frac{1}{e^{x/4\pi}-1}$, which also diverges when $x \to 0$.
+
+In conclusion, the BEC temperature for the free bosons at one and two dimensions is zero. Or, at 1D and 2D, the free bosons do not condensate.

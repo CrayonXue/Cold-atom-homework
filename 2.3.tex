@@ -1,0 +1,64 @@
+\section*{Problem 2.3}
+Show that for a finite range interaction $V(r) \simeq 0$ for $r>r_0$, the phase shift for the $l$th partial wave $\delta_l \propto k^{2l+1}$
+\paragraph{Solution:} 
+In the $r>r_0$ regime, the function to be solved can be written as: 
+\begin{equation}
+    \frac{d^{2} u_{kl}}{dr^2} - \frac{l(l+1)}{r^2} u_{kl} + k^2 u_{kl} = 0
+\end{equation}
+with $E = \frac{\hbar^2k^2}{2\Bar{m}}$, and the radial wave function $\chi_{kl} = \frac{u_{kl} }{r}$.
+
+In the $r\to\infty$ limit, the function becomes 
+\begin{equation}
+    \left[\frac{d^{2}}{dr^2} + k^2\right] u_{kl} \approx 0
+\end{equation}
+and the general solution is
+\begin{equation}
+    u_{kl}(r) \approx A e^{ikr} + B e^{-ikr}
+\end{equation}
+which can be regarded as superposition of incoming wave and outgoing wave. Because of the conservation of probability, the modula of $A$ and $B$ should be the same. Then:
+\begin{equation}
+    u_{kl}(r) \approx C \sin \left(kr-l\frac{\pi}{2}+\delta_l\right)
+\end{equation}
+The reason we insert the $l\frac{\pi}{2}$ is that for free particle the $\delta_l=0$.
+
+So the large-distance behavior of the radial wave function is:
+\begin{equation}
+    \chi_{kl} \approx C\frac{e^{-ikr}e^{il\pi/2}-e^{ikr}e^{-il\pi/2}e^{2i\delta_l}}{2ikr}
+\end{equation}
+
+On the other hand, the wave function at $r>r_0$ regime can be written in the basis of spherical harmonic functions. Then it is therefore a linear combination of $j_l(kr)P_l(\cos\theta)$ and $n_l(kr)P_l(\cos\theta)$. With the spherical Hankel functions defined as
+\begin{equation}
+    h_l^{(1)} = j_l +in_l, h_l^{(2)} = j_l-in_l
+\end{equation}
+the radial wave function is 
+\begin{equation}
+    \chi_{kl} = c_l^{(1)}h_l^{(1)} +c_l^{(2)}h_l^{(2)}
+\end{equation}
+At large r limit, we have
+\begin{equation}
+    h_l^{(1)} \to \frac{e^{i\left(kr-l\pi/2\right)}}{ikr}, h_l^{(2)} \to \frac{e^{-i\left(kr-l\pi/2\right)}}{ikr}
+\end{equation}
+Taking this into (19) and compare with (17), we have 
+\begin{equation}
+    \chi_{kl} \propto j_l(kr)\cos\delta_l - n_l(kr)\sin\delta_l
+\end{equation}
+
+In this specific potential, there should be $\chi_{kl}(R) =0$. Therefore the condition for the phase shift should be
+\begin{equation}
+    \tan\delta_l = \frac{j_l(kR)}{n_l(kR)}
+\end{equation}
+In the low energy limit, which means $kR\ll1$, we have
+\begin{equation}
+    \begin{aligned}
+        &j_l(kr) \simeq \frac{(kr)^l}{(2l+1)!!} \\
+        &n_l(kr) \simeq -\frac{(2l-1)!!}{(kr)^{l+1}}
+    \end{aligned}
+\end{equation}
+and then 
+\begin{equation}
+    \tan\delta_l =\frac{-(kR)^{2l+1}}{(2l+1)!!(2l-1)!!}
+\end{equation}
+Because $kR\ll1$, $\tan\delta_l \approx \delta_l$, so we get
+\begin{equation}
+    \delta_l \propto k^{2l+1}
+\end{equation}

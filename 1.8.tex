@@ -1,0 +1,39 @@
+\def\ahf{\alpha_{\mathrm{hf}}}
+\def\muB{\mu_{\mathrm{B}}}
+\def\gS{g_{\mathrm{S}}}
+\def\muN{\mu_{\mathrm{N}}}
+\def\gI{g_{\mathrm{I}}}
+
+\section*{Problem 1.8}
+\paragraph{} Considering a time-dependent Hamiltonian
+\begin{equation}
+    \hat{H} = \omega \hat{F_z} + B_0 \cos(\omega _0t) \hat{F_x},
+\end{equation}
+show that when $\omega_0$ is close to $\omega$, by rotating wave approximation, the Hamiltonian can become a time-independent one as
+\begin{equation}
+    \hat{H} = \Delta \hat{F_z} + \frac{B_0}{2} \hat{F_x}
+\end{equation}
+where $\Delta$ = $\omega - \omega_0$.
+\paragraph{Solution:} 
+Rewrite the Hamiltonian
+\begin{equation}
+    \hat{H} = \omega \hat{F_z} + \frac{B_0}{2}(e^{i\omega_0 t}+e^{-i\omega_0 t})\hat{F_x} 
+\end{equation}
+Using the unitary transformation$\hat{u}=e^{-i\omega_0 t \hat{F_z}/\hbar}$, and the formula 
+\begin{equation}
+    e^{\hat{A}} \hat{B} e^{-\hat{A}} = \hat{B} + [\hat{A},\hat{B}] + \frac{1}{2!}[\hat{A},[\hat{A},\hat{B}]]+...+\frac{1}{n!}[\hat{A},[\hat{A}...,[\hat{A},\hat{B}]...]+...   
+\end{equation}
+we get 
+\begin{equation}
+    \hat{u}^{\dag} \hat{F_x} \hat{u} = \hat{F_x}\cos(\omega_0 t)-\hat{F_y} \sin(\omega_0 t)
+\end{equation}
+take this bake to the Hamiltonian and expand the trigonometric functions by Euler formula, we get
+\begin{equation}
+    \hat{u}^{\dag} \hat{H} \hat{u} = \omega \hat{F_z} + \frac{B_0}{4} [(e^{2i\omega_0 t}+e^{-2i\omega_0 t}+2)\hat{F_x} + (e^{2i\omega_0 t}+e^{-2i\omega_0 t})\hat{F_y}
+\end{equation}
+by rotating wave approximation, the terms with $2\omega_0$ frequency can be dropped. Meanwhile, the transformation is time dependent, so the final results should be $\hat{H} \to \hat{u}^{\dag} \hat{H} \hat{u} + i\hbar (\partial_t \hat{u}^{\dag})\hat{u}$, the second term gives $-\omega_0 \hat{F_z}$
+\begin{equation}
+    \hat{H} \to \Delta \hat{F_z} + \frac{B_0}{2} \hat{F_x}
+\end{equation}
+
+

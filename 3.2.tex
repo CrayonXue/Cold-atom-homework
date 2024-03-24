@@ -1,0 +1,18 @@
+\section*{Problem 3.2}
+Calculate the two-body density matrix $\rho(\mathbf{r},\mathbf{r'})$ for noninteracting bosons above and below the Bose-Einstein condensation temperature.
+\paragraph*{Solution:}
+The two-body density matrix is defined as 
+\begin{equation}
+    \rho(\bm{r}_1, \bm{r}_2, \bm{r}'_1, \bm{r}'_2) = \braket{\hat{\Psi} ^{\dagger}(\bm{r}_1) \hat{\Psi }^{\dagger}(\bm{r}_2) \hat{\Psi}(\bm{r}'_1)\hat{\Psi}(\bm{r}'_2)}
+\end{equation}
+Under the situation $\bm{r}_1 \approx \bm{r}_2 \approx \bm{r}$ and $\bm{r}'_1 \approx \bm{r}'_2 \approx \bm{r}'$, we have
+\begin{equation}
+    \rho(\bm{r} , \bm{r}') \approx \sum_i N_i \psi ^*_i(\bm{r}) \psi_i(\bm{r}')
+\end{equation}
+
+Above the BEC temperature, in all modes the occupation number is 
+\begin{equation}
+    N_i = \frac{1}{e^{-(\epsilon _i - \mu)/k_BT}-1}
+\end{equation}
+
+Under the BEC temperature, the modes with $k=0$ have the macroscopically occupation $N_0$, while in other modes still obays the Bose-Einstein distribution.

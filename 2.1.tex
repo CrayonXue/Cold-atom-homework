@@ -1,0 +1,40 @@
+\def\ahf{\alpha_{\mathrm{hf}}}
+\def\muB{\mu_{\mathrm{B}}}
+\def\gS{g_{\mathrm{S}}}
+\def\muN{\mu_{\mathrm{N}}}
+\def\gI{g_{\mathrm{I}}}
+
+\section*{Problem 2.1}
+\paragraph{} Calculate the scattering length for a three-dimensional square well interaction potential $V(r) = 0$ for $r>r_0$, $V(r) = -V_0$ for $r_0 > r>0$ with $V_0>0$ and $V(r) = \infty$ for r=0. Discuss how the scattering length changes as a function of $V_0$, and discuss when the binding energy satisfies the relation $E = -\hbar^{2}/(2\Bar{m} {a_s}^2)$
+\paragraph{Solution:} 
+Because the potential is spherical symmetric, we can expand the wave function in the relative coordinate in terms of angular momentum partial waves:
+\begin{equation}
+    \Psi(\bm{r}) = \sum_l \frac{\chi_{kl}(r)}{k r}\mathcal{P}_l(\cos(\theta))
+\end{equation}
+At low energy, the interaction effect is dominated by the s-wave channel, i.e. $l = 0$, so we can consider this special case only. The Schrodinger equation is:
+\begin{equation}
+    -\frac{\hbar^2}{2m}\nabla^2 \chi_k(r) + V(r) \chi_k(r) = E \chi_k(r)
+\end{equation}
+In the regime $r>r_0$, the wave function can be written as:
+\begin{equation}
+    \chi_k(r) \propto \sin(k r + \delta_k) \approx \sin(\delta_k) + k r \cos(\delta_k) \propto 1-\frac{r}{a_s},
+\end{equation}
+so the scattering length just equal to the node of the wave function at $r>r_0$.
+When $0<r<r_0$, the wave function can be solved as:
+\begin{equation}
+    \chi_k(r) = \sin(\sqrt{\frac{2V_0m}{\hbar^2}}r)
+\end{equation}
+The slope should be the same at $r = r_0$,
+% so we have $-\frac{1}{a_s} \propto \sqrt{\frac{2V_0m}{\hbar^2}} \cos( \sqrt{\frac{2V_0m}{\hbar^2}}r_0)$
+% When a_s close to 0, higher order should be considered. So the slope is not a good tool while node does.
+so the wave function at $r>r_0$ is just extension cord and the node is $a_s$. As the slope at $r_0$ varies periodical (not strictly) with $V_0$, the node as well as $a_s$ goes from infinity to negative infinity repeatedly. 
+\paragraph{}
+When the binding energy $E = -\hbar^{2}/(2\Bar{m} a_s^2)$, the $a_s$ should be positive. When $s_s \to \infty$, the binding energy $\to 0$. As $V_0$ increases and $a_s$ decreases, the binding energy increases. This means the bound state becomes deeper and can not be described by this low energy assumption.
+
+
+
+
+
+
+
+

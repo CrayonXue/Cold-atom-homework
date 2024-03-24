@@ -1,0 +1,67 @@
+\section*{Problem 6.1}
+Solve the Cooper problem Eq.6.8 and compare the solution with the solution of the two-body problem in a vacuum of Eq.6.5 for positive $a_s$.
+\paragraph*{Solution:}
+In a vacuum, 
+\begin{equation}
+    \begin{aligned}
+        \frac{m}{4\pi \hbar^2 a_s}
+        & = \frac{1}{V} \sum_{\bm{k}} \left(\frac{1}{E - 2 \epsilon_{\bm{k}} } + \frac{1}{2 \epsilon_{\bm{k}}}\right)\\
+        & =\frac{4\pi E}{V} \frac{V}{(2\pi)^3} \int_{0}^{\infty}  \,k^2 dk \frac{1}{\left(E - \frac{\hbar^2 k^2}{m}\right) \frac{\hbar^2 k^2}{m}} \\
+        & = \frac{E}{2 \pi^2} \left(\frac{m}{\hbar^2}\right)^2
+        \int_{0}^{\infty} \frac{dk}{\frac{mE}{\hbar^2} - k^2}
+    \end{aligned}
+\end{equation}
+if $E>0$, we can infer from
+\begin{equation}
+    \int_{0}^{\infty} \frac{dx}{1 - x^2} 
+    = \frac{1}{2} \left. \ln \frac{|1+x| }{|1-x| }\right \vert ^{\infty}_0
+    = 0
+\end{equation}
+that $ \frac{m}{4\pi \hbar^2 a_s} = 0$, which also applies when $E = 0$.
+When $E <0$, from
+\begin{equation}
+    \int_{0}^{\infty} \frac{dx}{a^2 + x^2}
+    = \left.\frac{\arctan x/a}{a}\right \vert^{\infty}_0
+    = \frac{\pi}{2a}
+\end{equation}
+we get
+\begin{equation}
+    \frac{m}{4\pi \hbar^2 a_s}
+    = \frac{1}{4 \pi} \left(\frac{m}{\hbar^2}\right)^{3/2} \sqrt[]{-E}
+\end{equation}
+simplied as 
+\begin{equation}
+    E = - \frac{\hbar^2}{ma^2_s}
+\end{equation}
+
+On top of a Fermi sea, we have
+\begin{equation}
+    \begin{aligned}
+        \frac{m}{4\pi \hbar^2 a_s}
+        & = \frac{1}{V} \left[ \sum_{|\bm{k}| > k_F} \left(\frac{1}{E - 2 (\epsilon_{\bm{k}} - \mu) } + \frac{1}{2 \epsilon_{\bm{k}}}\right)\right] \\ 
+        & = \frac{E+2\mu}{2\pi^2} \left(\frac{m}{\hbar^2}\right)^2
+        \int_{k_F}^{\infty} \frac{dk}{\frac{m(E+2\mu)}{\hbar^2} - k^2}
+        + \frac{1}{2\pi^2} \frac{m}{\hbar^2} \int_{0}^{k_F} dk
+    \end{aligned}
+\end{equation}
+
+When $E > -2\mu$, we have
+\begin{equation}
+    \int_{k_F}^{\infty} \frac{dk}{\frac{m(E+2\mu)}{\hbar^2} - k^2}
+    = \frac{1}{2} \left. \ln \frac{|\sqrt{\frac{mE}{\hbar^2}+k_F}+k| }{|\sqrt{\frac{mE}{\hbar^2}+k_F}-k| }\right \vert ^{\infty}_{k_F}
+    = \frac{1}{2} \ln \frac{|\sqrt{\frac{mE}{\hbar^2}+k_F} - k_F| }{|\sqrt{\frac{mE}{\hbar^2}+k_F} + k_F| }
+\end{equation}
+
+When $E < -2\mu$, we have
+\begin{equation}
+    \begin{aligned}
+        \int_{k_F}^{\infty} \frac{dk}{\frac{m(E+2\mu)}{\hbar^2} - k^2}
+        & = - \left.
+        \frac{1}{\sqrt{-m(E+2\mu)/\hbar^2}}    
+        \arctan \frac{k}{\sqrt{-m(E+2\mu)/\hbar^2}}
+        \right \vert^{\infty}_{k_F}\\
+        & = \frac{1}{\sqrt{-m(E+2\mu)/\hbar^2}}
+        (\frac{\pi}{2} - \arctan \frac{k_F}{\sqrt{-m(E+2\mu)/\hbar^2}})
+    \end{aligned}
+\end{equation}
+take this back to the expression and then obtain the result.

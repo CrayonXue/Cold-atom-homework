@@ -1,0 +1,48 @@
+\section*{Problem 6.2}
+Calculate the ground state energy of the BCS mean-field Hamiltonian as a function of $\Delta $, and minimize this ground state energy with respect to $\Delta $ to obtain the gap equation.
+\paragraph*{Solution:}
+The mean-field Hamiltonian is 
+\begin{equation}
+    H_{BCS} 
+    = \sum_{\bm{k}} \left[\mathcal{E}_{\bm{k}} 
+    \left( \hat{\alpha}^{\dagger}_{\bm{k}} \hat{\alpha}_{\bm{k}} 
+    + \hat{\beta}^{\dagger}_{\bm{k}}\hat{\beta}_{\bm{k}}\right) 
+    + \left( \epsilon_{\bm{k}} - \mu\right)
+    - \mathcal{E}_{\bm{k}} \right]
+    - \frac{\Delta^2 V}{g}
+\end{equation}
+with 
+\begin{equation}
+    \mathcal{E}_{\bm{k}} = \sqrt{(\epsilon_{\bm{k}}-\mu)^2 + \Delta^2}
+\end{equation}
+For ground state, we have
+\begin{equation}
+    \hat{\alpha}_{\bm{k}} \ket{\Psi_{BCS}} = 0, \, 
+    \hat{\beta}_{\bm{k}} \ket{\Psi_{BCS}} = 0
+\end{equation}
+so the ground state energy is given by 
+\begin{equation}
+    E_{BCS} = \sum_{\bm{k}} \left[
+        (\epsilon_{\bm{k}} - \mu) - \mathcal{E}_{\bm{k}}
+    \right] 
+    - \frac{\Delta^2 V}{g}
+\end{equation}
+take the partial derivative of $E_{BCS}$ with respect to $\Delta$, we get 
+\begin{equation}
+    \frac{\partial E_{BCS}}{\partial \Delta}
+    = \sum_{\bm{k}} \frac{\Delta}{\mathcal{E}_{\bm{k}}} - \frac{2\Delta V}{g} = 0
+\end{equation}
+and then we get
+\begin{equation}
+    \frac{1}{g} 
+    = \frac{1}{V} \sum_{\bm{k}} \frac{1}{2 \mathcal{E}_{\bm{k}}}
+\end{equation}
+using the renormalizetion condition for g and we get 
+\begin{equation}
+    -\frac{m}{4\pi \hbar^2 a_s}
+    = \frac{1}{V} \sum_{\bm{k}} \left(
+        \frac{1}{2 \mathcal{E}_{\bm{k}}} 
+        - \frac{1}{2 \epsilon_{\bm{k}}}
+    \right)
+\end{equation}
+which is the gap equation. 

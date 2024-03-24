@@ -1,0 +1,45 @@
+\section*{Problem 6.3}
+Discuss the self-consistent solution of the BCS problem for the Hamiltonian
+\begin{equation}
+    H_{BCS} 
+    = \sum_{\bm{k}, \sigma} (\epsilon_{\bm{k}} - \mu_{\sigma}) \hat{c}^{\dagger}_{\bm{k}\sigma} \hat{c}_{\bm{k}\sigma}
+    + \sum_{\bm{k}} \Delta \hat{c}^{\dagger}_{\bm{k}\uparrow } \hat{c}^{\dagger}_{\bm{-k}\downarrow }
+    + \sum_{\bm{k}} \Delta^* \hat{c}_{\bm{-k}\downarrow } \hat{c}_{\bm{k}\uparrow }
+\end{equation}
+when $\mu_{\uparrow} \neq \mu_{\downarrow}$, and compare the energy of the BCS state with the free Fermi gas for different $h = \mu_{\uparrow} - \mu_{\downarrow}$.
+\paragraph*{Solution:}
+This Hamiltonian is
+\begin{equation}
+    H_{BCS} 
+    = \sum_{\bm{k}} \left[
+        (\hat{c}^{\dagger}_{\bm{k}\uparrow } ,\, \hat{c}_{\bm{-k}\downarrow } )
+        \begin{pmatrix}
+            \epsilon_{\bm{k}} - \mu_{\uparrow} & \Delta \\
+            \Delta^* & -(\epsilon_{\bm{k}} - \mu_{\downarrow})
+        \end{pmatrix}
+        \binom{\hat{c}_{\bm{k}\uparrow}}{\hat{c}^{\dagger}_{\bm{-k}\downarrow}}
+        + (\epsilon_{\bm{k}} - \mu_{\downarrow})
+    \right]
+\end{equation}
+which can be diagonalized as 
+\begin{equation}
+    H_{BCS}
+    = \sum_{\bm{k}} \left[
+        (\mathcal{E}_{\bm{k}} - \frac{h}{2}) 
+        \hat{\alpha}^{\dagger}_{\bm{k}} \hat{\alpha}_{\bm{k}} 
+        + (\mathcal{E}_{\bm{k}} + \frac{h}{2}) 
+        \hat{\beta}^{\dagger}_{\bm{k}}\hat{\beta}_{\bm{k}}
+        + \left( \epsilon_{\bm{k}} - \bar{\mu}\right)
+        - \mathcal{E}_{\bm{k}}
+    \right]
+\end{equation}
+with 
+\begin{equation}
+    \mathcal{E}_{\bm{k}} = \sqrt{(\epsilon_{\bm{k}}-\bar{\mu})^2 + \Delta^2}
+\end{equation}
+When $h<\Delta$, the ground is the same as the one with the same chemical potential, and the energy is 
+\begin{equation}
+    E_{BCS} = \sum_{\bm{k}} \left[
+        (\epsilon_{\bm{k}} - \bar{\mu}) - \mathcal{E}_{\bm{k}}
+    \right] 
+\end{equation}

@@ -1,0 +1,46 @@
+\section*{Problem 3.10}
+Discuss the Hanbury-Brown-Twiss effect for noninteracting fermions and compare its difference with noninteracting bosons.
+\paragraph*{Solution:}
+We made two groups of noninteracting bosons and put them into the double-well, the initial state is given by 
+\begin{equation}
+    \ket{\Psi} = \frac{1}{\sqrt[]{(N/2)!}} \left(\hat{a}^{\dagger}_1 \hat{a}^{\dagger}_2\right)^{N/2} \ket{0} 
+\end{equation}
+With 
+\begin{equation}
+    \hat{\Psi}(\bm{r}) = \Psi_1(\bm{r}) \hat{a}_1 + \Psi_2(\bm{r}) \hat{a}_2
+\end{equation}
+the ensemble average of the density can be written as 
+\begin{equation}
+    n(\bm{r}) 
+    = \braket{\hat{\Psi}^{\dagger}(\bm{r}) \hat{\Psi}(\bm{r})} 
+    = \braket{\hat{a}^{\dagger}_1 \hat{a}_1} |\Psi_1(\bm{r})|^2
+    + \braket{\hat{a}^{\dagger}_2 \hat{a}_2} |\Psi_2(\bm{r})|^2
+\end{equation}
+And the ensemble average of the density-density correlation is 
+\begin{equation}
+    \begin{aligned}
+        \braket{\widetilde{n}(\bm{r}) \widetilde{n}(\bm{r}') } 
+        &= \braket{\hat{\Psi}^{\dagger}(\bm{r}) \hat{\Psi}(\bm{r})\hat{\Psi}^{\dagger}(\bm{r}')\hat{\Psi}(\bm{r}')} \\
+        &= n(\bm{r})n(\bm{r}') 
+        + \braket{\hat{a}^{\dagger}_1 \hat{a}_1} \braket{\hat{a}^{\dagger}_2 \hat{a}_2} 
+        \left(\Psi^*_1(\bm{r})\Psi^*_2(\bm{r}')\Psi_2(\bm{r})\Psi_1(\bm{r}')  + \mathrm{h.c.} \right)
+    \end{aligned}
+\end{equation}
+
+For fermions, the initial state is
+\begin{equation}
+    \ket{\Psi} = \ket{1,1}
+\end{equation}
+and the correlation is 
+\begin{equation}
+    \begin{aligned}
+        \braket{\widetilde{n}(\bm{r}) \widetilde{n}(\bm{r}') } 
+        &= \braket{\hat{\Psi}^{\dagger}(\bm{r}) \hat{\Psi}(\bm{r})\hat{\Psi}^{\dagger}(\bm{r}')\hat{\Psi}(\bm{r}')}
+        = n(\bm{r})n(\bm{r}') \\
+        & + \braket{\hat{a}^{\dagger}_1 \hat{a}_1} (1- \braket{\hat{a}^{\dagger}_2 \hat{a}_2} )
+        \left(\Psi^*_1(\bm{r})\Psi^*_2(\bm{r}')\Psi_2(\bm{r})\Psi_1(\bm{r}') \right) \\
+        & + \braket{\hat{a}^{\dagger}_2 \hat{a}_2} (1- \braket{\hat{a}^{\dagger}_1 \hat{a}_1} )
+        \left(\Psi_1(\bm{r})\Psi_2(\bm{r}')\Psi^*_2(\bm{r})\Psi^*_1(\bm{r}') \right)
+    \end{aligned}
+\end{equation}
+because of $ \braket{\hat{a}^{\dagger}_i \hat{a}_i} = 1$, the last two terms in correlation both are zero. So there is no interference pattern for fermions.
